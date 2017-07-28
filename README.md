@@ -19,6 +19,7 @@ let package = Package(
 ```
 
 ### Example
+Setup the `APITokenVerification` class with the API tokens you would like to accept.
 ``` Swift
 public class RouterCreator {
     public static func create() -> Router {
@@ -32,6 +33,14 @@ public class RouterCreator {
     }
 }
 ```
+
+Add the `apiToken` header to the appropriate HTTP requests.
+``` sh
+curl "http://example.com/foo" \
+     -H "apiToken: B2D06875-E45D-4EEF-BB4F-05B95A572A82"
+```
+
+
 
 ## License
 Licensed under the MIT license. Full text available in [LICENSE](LICENSE.txt).
