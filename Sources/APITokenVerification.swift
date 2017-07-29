@@ -19,7 +19,7 @@ public class APITokenVerification: RouterMiddleware {
                     return value == token
                 })
                 
-                if apiTokenIsValid {
+                if apiTokenIsValid || apiTokens.count < 1 {
                    next()
                 } else {
                     try? response.send(status: .unauthorized).end()
