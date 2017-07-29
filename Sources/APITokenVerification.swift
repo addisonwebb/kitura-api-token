@@ -28,7 +28,7 @@ public class APITokenVerification: RouterMiddleware {
                 try? response.send(status: .badRequest).end()
             }
         } else {
-            try? response.send(status: .unauthorized).end()
+            try? response.send(status: .badRequest).end()
         }
     }
 }
